@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - E-Commerce Clothing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">E-Commerce Clothing</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Daftar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Hubungi Kami</h2>
+        <div class="contact-item">
+            <p>Email: <span id="email">ketuk tombol dibawah untuk menyalin alamat e-mail</span></p>
+            <button onclick="copyToClipboard('azrielkausar@gmail.com')">Salin Email</button>
+        </div>
+        <div class="contact-item">
+            <p>Nomor Telepon: <a href="https://wa.me/628987960874" target="_blank">+62 898-7960-874</a></p>
+        </div>
+        <div class="contact-item">
+            <p>Instagram: <a href="https://www.instagram.com/goodtop.archive/" target="_blank">@goodtop.archive</a></p>
+        </div>
+    </section>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Email berhasil disalin ke clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>

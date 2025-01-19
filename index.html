@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - E-Commerce Clothing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">E-Commerce Clothing</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Daftar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <section>
+        <h1>Selamat Datang di Goodtop.Archive</h1>
+        <p>Temukan outfit-outfit kece dan kalcer hanya disini.</p>
+        <a href="shop.html">
+            <button>Shop Now</button>
+        </a>
+        <button id="logoutBtn">Logout</button>
+    </section>
+
+
+
+    <script>
+        // Periksa apakah pengguna sudah login
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            alert('Anda harus login terlebih dahulu!');
+            window.location.href = 'login.html'; // Arahkan ke halaman login
+        }
+
+        // Logout pengguna
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            localStorage.removeItem('isLoggedIn'); // Hapus status login
+            localStorage.removeItem('userEmail'); // Hapus data pengguna (opsional)
+            localStorage.removeItem('userPassword'); // Hapus data password (opsional)
+            alert('Logout berhasil!');
+            window.location.href = 'login.html'; // Arahkan ke halaman login
+        });
+    </script>
+</body>
+</html>
